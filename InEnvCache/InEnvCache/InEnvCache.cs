@@ -38,7 +38,7 @@ namespace InEnvCache
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine("Failed to load Kubernetes usinf env");
                 kubernetesCache = false;
             }
         }
@@ -170,7 +170,7 @@ namespace InEnvCache
                 }
 
                 var cacheValue = JsonConvert.DeserializeObject<dynamic>(serializedValue);
-                if (cacheValue.expiry != null && DateTime.Parse((string)cacheValue.expiry, null, System.Globalization.DateTimeStyles.RoundtripKind) < DateTime.UtcNow)
+                if (cacheValue.expiry != null && cacheValue.expiry < DateTime.UtcNow)
                 {
                     // Cache expired
                     return null;
