@@ -5,5 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+	<ItemGroup>
+		<PackageReference Include="KubernetesClient" Version="14.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0-preview.5.24306.7" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
 </Project>
