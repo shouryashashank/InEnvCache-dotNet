@@ -4,8 +4,25 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PackageId>InEnv.Cache</PackageId>
+	<Version>0.0.100</Version>
+	<Author>Shourya Shashank</Author>
+	<Product>InEnvCache</Product>
+	<Discription>InEnvCache is a dot net library designed to facilitate caching across pods within an environment, leveraging the Kubernetes API for distributed cache management. This framework allows for efficient and secure storage and retrieval of cached objects, making it ideal for applications running in Kubernetes clusters.</Discription>
+	<PackageLicenseFile>LICENSE-COMMERCIAL-YEARLY.txt</PackageLicenseFile>
+	<PackageLicenseFile>LICENSE-COMMERCIAL-PERPETUAL.txt</PackageLicenseFile>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageProjectUrl>https://github.com/shouryashashank/InEnvCache-dotNet</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageIcon>icon.png</PackageIcon>
+	<PackageTags>Cache;Kubernetes</PackageTags>
+ </PropertyGroup>
 	<ItemGroup>
+		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath=""/>
+		<None Include="licenses\LICENSE-COMMERCIAL-PERPETUAL.txt" Pack="true" PackagePath=""/>
+		<None Include="licenses\LICENSE-COMMERCIAL-YEARLY.txt" Pack="true" PackagePath=""/>
+		<None Include="icon.png" Pack="true" PackagePath="/"/>
+		<None Include="README.md" Pack="true" PackagePath="/"/>
 		<PackageReference Include="KubernetesClient" Version="14.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0-preview.5.24306.7" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
