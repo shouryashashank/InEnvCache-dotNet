@@ -15,40 +15,41 @@ To get started with InEnvCache, follow these simple steps:
 1. **Installation**: First, install the library using pip:
 
     ```bash
+    dotnet add package InEnv.Cache 
     ```
 
 2. **Initialization**: Import and initialize InEnvCache in your dotNet application:
 
     ```dotNet
-    from in_env_cache import InEnvCache
+    using InEnvCache;
 
     # Create an instance of InEnvCache with optional encryption key
-    cache = InEnvCache(key="my-secret-key")
+    var cache = new InEnvCache.InEnvCache("test-key");
     ```
 
 3. **Set a Cache Value**: Store a value in the cache with an optional time-to-live (TTL):
 
     ```dotNet
-    cache.set("key1", "value1", ttl=600)
+    cache.Set("key1", "value1", 600);
     ```
 
 4. **Get a Cache Value**: Retrieve a value from the cache:
 
     ```dotNet
-    value = cache.get("key1")
-    print(value)  # Output: value1
+    value = cache.Get("key1")
+    Console.WriteLine(value);  # Output: value1
     ```
 
 5. **Delete a Cache Value**: Remove a value from the cache:
 
     ```dotNet
-    cache.delete("key1")
+    cache.Delete("key1")
     ```
 
 6. **Flush the Cache**: Clear all values from the cache:
 
     ```dotNet
-    cache.flush_all()
+    cache.FlushAll()
     ```
 
 With these steps, you can easily integrate InEnvCache into your Kubernetes-based applications for efficient caching solutions.
