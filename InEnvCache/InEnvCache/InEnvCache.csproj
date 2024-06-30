@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<PackageId>InEnv.Cache</PackageId>
-	<Version>0.0.100</Version>
+	<Version>0.0.101</Version>
 	<Author>Shourya Shashank</Author>
 	<Product>InEnvCache</Product>
 	<Discription>InEnvCache is a dot net library designed to facilitate caching across pods within an environment, leveraging the Kubernetes API for distributed cache management. This framework allows for efficient and secure storage and retrieval of cached objects, making it ideal for applications running in Kubernetes clusters.</Discription>
